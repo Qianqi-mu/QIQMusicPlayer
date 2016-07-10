@@ -64,4 +64,14 @@ static QIQSong *_playingSong = nil;
     return _songs[index];
 }
 
++ (QIQSong *)randomSong {
+    NSInteger index = 0;
+    if (_playingSong) {
+        do {
+            index = arc4random()%_songs.count;
+        } while (index == [_songs indexOfObject:_playingSong]);
+    }
+    return _songs[index];
+}
+
 @end

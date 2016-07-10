@@ -6,12 +6,12 @@
 //  Copyright © 2016年 QiQ. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-@class QIQSong;
-
 /**
  *  QIQSongsManager负责管理整个歌单，监听正在播放的歌曲，设置当前需要播放的歌曲，监测下一首歌曲、上一首歌曲
  */
+#import <Foundation/Foundation.h>
+
+@class QIQSong;
 
 @interface QIQSongsManager : NSObject
 
@@ -43,5 +43,10 @@
  *  返回当前正在播放歌曲的下一首歌曲
  */
 + (QIQSong *)nextSong;
+
+/**
+ *  返回随机播放模式下一首/上一首歌
+ */
++ (QIQSong *)randomSong;
 
 @end
